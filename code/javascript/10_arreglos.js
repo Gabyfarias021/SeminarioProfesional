@@ -80,3 +80,19 @@ otrasPersonas.map(pasarAlturasMetros)
 
 console.log( personas )
 console.log( otrasPersonas )
+
+//------ Contabilizar Libros en total ------
+
+//1ra forma 
+var sum = 0
+for(persona of personas){
+    sum += persona.cantidadLibros
+}
+console.log( `La cantidad de libros es ${sum}.` )
+
+
+//2da forma
+const contabilizarLibros = (acum, { cantidadLibros }) => acum + cantidadLibros
+
+var totalLibros = personas.reduce( contabilizarLibros, 0 )
+console.log( `La cantidad de libros en total es ${totalLibros}.` )

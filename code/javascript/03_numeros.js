@@ -13,3 +13,5 @@ console.log(`siendo el precio del Vino $ ${precioVino} el total incluyendo Iva e
 var promedio = 15.6
 var promedioTotal = Math.rounf (promedio)
 console.log(promedioTotal)
+
+

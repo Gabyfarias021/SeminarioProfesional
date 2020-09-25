@@ -1,4 +1,5 @@
 var contador = 0
+
 const avanzar = () => {
 numero= Math.random()
 console.log( numero )

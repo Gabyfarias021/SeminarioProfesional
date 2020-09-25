@@ -9,10 +9,10 @@ const DECREMENTARPESO = 2
 const aumentarPeso = (persona) => objeto.peso += INCREMENTARPESO
 const disminuyePeso = (persona) => objeto.peso -= DECREMENTARPESO
 
-const comeMucho = () => Math.random() < 0.6
-const realizaDeporte = () => Math.random() < 0.3
+const comeMucho = () => Math.random() < 0.5
+const realizaDeporte = () => Math.random() < 0.7
 const meta = persona.peso - 10
-
+ console.log(´Al inicio del años ${persona.nombre}pesa ${persona.peso}.´)
 
 while(persona.peso > meta){
 if (comeMucho()){

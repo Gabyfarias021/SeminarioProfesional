@@ -46,10 +46,10 @@ Persona.prototype.soyAlto = function(){
 
 heredaDe(Deportista, Persona)
 
-var objeto1 = new Persona('Jonathan', 'Almeida', 1.63)
+var objeto1 = new Persona('Gabriela', 'Farias', 1.63)
 objeto1.saludar()
 objeto1.soyAlto()
 
-var objeto2 = new Deportista('Miguel', 'Alvarado', 1.80)
+var objeto2 = new Deportista('Carolina', 'Olivares', 1.80)
 objeto2.saludar()
 objeto2.soyAlto()
