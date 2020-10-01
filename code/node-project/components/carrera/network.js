@@ -5,13 +5,13 @@ const controller = require('./controller')
 const router = express.Router()
 
 router.get('/', function(req, res) {
-    console.log('ingreso')
-    controller.getCarreras()
-        .then( (data)  => {
-            response.success(req, res, data, 200)
+    const filtroCarrera = req.query.carrera || null
+    controller.getCarreras( filtroCarrera )
+        .then((data) => {
+            response.success( req, res, data, 200 )
         })
         .catch((error) => {
-            response.error( req, res, error, 500)
+            response.error( req, res, error, 500 )
         })
 })
 
