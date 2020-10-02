@@ -1,8 +1,7 @@
 const storage = require('./storage')
 
 function addDocente(nombre, apellido, correo_electronico) {
-    console.log('controller')
-    return new Promise( (resolve, reject) => {
+    return new Promise((resolve, reject) => {
         let docente = {
             nombre: nombre,
             apellido: apellido,
@@ -13,7 +12,7 @@ function addDocente(nombre, apellido, correo_electronico) {
     })
 }
 
-function getDocente( filtroDocente ) {
+function getDocentes( filtroDocente ) {
     return new Promise( (resolve, reject) => {
         resolve( storage.get( filtroDocente ) )
     } )
@@ -24,7 +23,7 @@ function updateDocente(idDocente, nombre, apellido, correo_electronico) {
         let docente = {
             nombre: nombre,
             apellido: apellido,
-            correo_electronico: correo_electronico, 
+            correo_electronico: correo_electronico,
         }
         const result = await storage.update(idDocente, docente)
         resolve( result )
@@ -41,7 +40,7 @@ function deleteDocente(idDocente) {
 
 module.exports = {
     addDocente,
-    getDocente,
+    getDocentes,
     updateDocente,
-    deleteDocente,    
+    deleteDocente,
 }
